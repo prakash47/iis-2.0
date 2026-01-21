@@ -1,0 +1,281 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'Custom Solutions';
+const description = 'Tailored solutions designed specifically for your unique business needs';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Custom Solutions",
+  "description": "Tailored solutions designed specifically for your unique business needs"
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-gradient-bg"></div>
+    <div class="container relative z-10">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="animate-slideInLeft">
+          <h1 class="text-5xl md:text-6xl font-bold mb-6">Custom Solutions</h1>
+          <p class="text-xl text-[var(--text-secondary)] mb-8">
+            Every business is unique. We create tailored solutions that address your specific challenges and unlock your full potential.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact/" class="btn btn-primary">Discuss Your Needs</a>
+            <a href="#sub-services" class="btn btn-outline">View Services</a>
+          </div>
+        </div>
+        
+        <div class="animate-slideInRight">
+          <div class="bg-[var(--bg-secondary)] rounded-2xl p-8 border border-[var(--border-color)]">
+            <div class="space-y-4">
+              <div class="h-3 bg-[var(--color-cyan-lighter)] rounded w-3/4"></div>
+              <div class="h-3 bg-[var(--color-cyan-lighter)] rounded w-full"></div>
+              <div class="h-3 bg-[var(--color-cyan-lighter)] rounded w-5/6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section bg-[var(--bg-secondary)]">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Why Choose Custom Solutions?</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="card">
+          <div class="text-4xl mb-4">🎯</div>
+          <h3 class="text-2xl font-bold mb-2">Perfect Fit</h3>
+          <p class="text-[var(--text-secondary)]">Solutions built specifically for your business requirements</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">💡</div>
+          <h3 class="text-2xl font-bold mb-2">Innovation</h3>
+          <p class="text-[var(--text-secondary)]">Creative approaches to solve your unique challenges</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">🔗</div>
+          <h3 class="text-2xl font-bold mb-2">Integration</h3>
+          <p class="text-[var(--text-secondary)]">Seamlessly integrates with your existing systems</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">📈</div>
+          <h3 class="text-2xl font-bold mb-2">Scalability</h3>
+          <p class="text-[var(--text-secondary)]">Built to grow with your business needs</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">🤝</div>
+          <h3 class="text-2xl font-bold mb-2">Partnership</h3>
+          <p class="text-[var(--text-secondary)]">We become an extension of your team</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">💼</div>
+          <h3 class="text-2xl font-bold mb-2">Business Focus</h3>
+          <p class="text-[var(--text-secondary)]">Solutions aligned with your business goals</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Categories -->
+  <section id="sub-services" class="section">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Custom Solution Categories</h2>
+      
+      <div class="space-y-12">
+        <!-- Enterprise Systems -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-3xl font-bold mb-4">Enterprise Systems</h3>
+            <p class="text-lg text-[var(--text-secondary)] mb-6">
+              Build custom enterprise applications that streamline operations, improve efficiency, and provide competitive advantages.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>ERP system development</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>CRM platforms</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Business intelligence tools</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Workflow automation systems</span>
+              </li>
+            </ul>
+            <a href="/contact/" class="btn btn-primary mt-8">Get Started</a>
+          </div>
+          <div class="bg-[var(--bg-secondary)] rounded-2xl h-96 flex items-center justify-center border border-[var(--border-color)]">
+            <div class="text-center">
+              <div class="text-6xl mb-4">🏢</div>
+              <p class="text-[var(--text-secondary)]">Enterprise Systems</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Integration Solutions -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="bg-[var(--bg-secondary)] rounded-2xl h-96 flex items-center justify-center border border-[var(--border-color)] order-2 md:order-1">
+            <div class="text-center">
+              <div class="text-6xl mb-4">🔗</div>
+              <p class="text-[var(--text-secondary)]">Integration Solutions</p>
+            </div>
+          </div>
+          <div class="order-1 md:order-2">
+            <h3 class="text-3xl font-bold mb-4">Integration & API Solutions</h3>
+            <p class="text-lg text-[var(--text-secondary)] mb-6">
+              Connect your systems and data with custom integrations and APIs that enable seamless communication across your tech stack.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Custom API development</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Third-party integrations</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Data synchronization</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Middleware solutions</span>
+              </li>
+            </ul>
+            <a href="/contact/" class="btn btn-primary mt-8">Get Started</a>
+          </div>
+        </div>
+
+        <!-- Industry-Specific -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-3xl font-bold mb-4">Industry-Specific Solutions</h3>
+            <p class="text-lg text-[var(--text-secondary)] mb-6">
+              We have expertise across various industries and can build solutions tailored to your specific sector's requirements.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Healthcare systems (HIPAA compliant)</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Financial services (PCI compliant)</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>E-commerce platforms</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>SaaS applications</span>
+              </li>
+            </ul>
+            <a href="/contact/" class="btn btn-primary mt-8">Get Started</a>
+          </div>
+          <div class="bg-[var(--bg-secondary)] rounded-2xl h-96 flex items-center justify-center border border-[var(--border-color)]">
+            <div class="text-center">
+              <div class="text-6xl mb-4">🏭</div>
+              <p class="text-[var(--text-secondary)]">Industry Solutions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Process -->
+  <section class="section bg-[var(--bg-secondary)]">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Our Custom Solution Process</h2>
+      
+      <div class="grid md:grid-cols-5 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-[var(--color-cyan)] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+          <h3 class="text-xl font-bold mb-2">Discovery</h3>
+          <p class="text-[var(--text-secondary)] text-sm">Understand your business and requirements</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-16 h-16 bg-[var(--color-cyan)] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+          <h3 class="text-xl font-bold mb-2">Design</h3>
+          <p class="text-[var(--text-secondary)] text-sm">Create comprehensive solution architecture</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-16 h-16 bg-[var(--color-cyan)] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+          <h3 class="text-xl font-bold mb-2">Development</h3>
+          <p class="text-[var(--text-secondary)] text-sm">Build your custom solution</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-16 h-16 bg-[var(--color-cyan)] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+          <h3 class="text-xl font-bold mb-2">Testing</h3>
+          <p class="text-[var(--text-secondary)] text-sm">Rigorous QA and testing</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-16 h-16 bg-[var(--color-cyan)] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">5</div>
+          <h3 class="text-xl font-bold mb-2">Deployment</h3>
+          <p class="text-[var(--text-secondary)] text-sm">Launch and ongoing support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Internal Linking -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Related Services</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <a href="/services/web-development/" class="service-card">
+          <h3 class="text-2xl font-bold mb-2">Web Development</h3>
+          <p class="text-[var(--text-secondary)]">Foundation for custom web solutions</p>
+        </a>
+        
+        <a href="/services/ai-workflows/" class="service-card">
+          <h3 class="text-2xl font-bold mb-2">AI Workflows</h3>
+          <p class="text-[var(--text-secondary)]">Enhance your solutions with AI</p>
+        </a>
+        
+        <a href="/services/maintenance/" class="service-card">
+          <h3 class="text-2xl font-bold mb-2">Maintenance & Support</h3>
+          <p class="text-[var(--text-secondary)]">Long-term support for your solutions</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-section text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Ready for a Custom Solution?</h2>
+        <p class="text-xl mb-8 opacity-90">Let's discuss how we can build the perfect solution for your business</p>
+        <a href="/contact/" class="inline-block px-8 py-4 bg-white text-[var(--color-navy)] font-bold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300">
+          Schedule a Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

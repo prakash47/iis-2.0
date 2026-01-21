@@ -1,0 +1,264 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'AI Workflows & Agentic Solutions';
+const description = 'Intelligent automation and agentic AI solutions for business efficiency';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "AI Workflows & Agentic Solutions",
+  "description": "Intelligent automation and agentic AI solutions for business efficiency"
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-gradient-bg"></div>
+    <div class="container relative z-10">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="animate-slideInLeft">
+          <h1 class="text-5xl md:text-6xl font-bold mb-6">AI Workflows & Agentic Solutions</h1>
+          <p class="text-xl text-[var(--text-secondary)] mb-8">
+            Harness the power of artificial intelligence to automate processes, enhance decision-making, and unlock new business opportunities.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact/" class="btn btn-primary">Explore AI Solutions</a>
+            <a href="#sub-services" class="btn btn-outline">View Services</a>
+          </div>
+        </div>
+        
+        <div class="animate-slideInRight">
+          <div class="bg-[var(--bg-secondary)] rounded-2xl p-8 border border-[var(--border-color)]">
+            <div class="space-y-4">
+              <div class="h-3 bg-[var(--color-cyan-lighter)] rounded w-3/4"></div>
+              <div class="h-3 bg-[var(--color-cyan-lighter)] rounded w-full"></div>
+              <div class="h-3 bg-[var(--color-cyan-lighter)] rounded w-5/6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section bg-[var(--bg-secondary)]">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Why Choose Our AI Solutions?</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="card">
+          <div class="text-4xl mb-4">🤖</div>
+          <h3 class="text-2xl font-bold mb-2">Advanced AI Models</h3>
+          <p class="text-[var(--text-secondary)]">Leverage cutting-edge LLMs and machine learning models</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">⚙️</div>
+          <h3 class="text-2xl font-bold mb-2">Process Automation</h3>
+          <p class="text-[var(--text-secondary)]">Automate repetitive tasks and improve efficiency</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">🧠</div>
+          <h3 class="text-2xl font-bold mb-2">Intelligent Agents</h3>
+          <p class="text-[var(--text-secondary)]">Deploy autonomous agents that learn and adapt</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">📈</div>
+          <h3 class="text-2xl font-bold mb-2">Data-Driven Insights</h3>
+          <p class="text-[var(--text-secondary)]">Extract actionable insights from your data</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">🔗</div>
+          <h3 class="text-2xl font-bold mb-2">Seamless Integration</h3>
+          <p class="text-[var(--text-secondary)]">Integrate with your existing systems and workflows</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">📊</div>
+          <h3 class="text-2xl font-bold mb-2">ROI Focused</h3>
+          <p class="text-[var(--text-secondary)]">Measurable results and clear business impact</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sub-services Section -->
+  <section id="sub-services" class="section">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Our AI Services</h2>
+      
+      <div class="space-y-12">
+        <!-- Agentic Integrations -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-3xl font-bold mb-4">Agentic AI Integrations</h3>
+            <p class="text-lg text-[var(--text-secondary)] mb-6">
+              Deploy intelligent agents that can understand context, make decisions, and take actions autonomously. Perfect for customer service, data analysis, and business process automation.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>LLM-powered chatbots and assistants</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Autonomous workflow agents</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Multi-agent systems</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Custom agent training and fine-tuning</span>
+              </li>
+            </ul>
+            <a href="/contact/" class="btn btn-primary mt-8">Get Started</a>
+          </div>
+          <div class="bg-[var(--bg-secondary)] rounded-2xl h-96 flex items-center justify-center border border-[var(--border-color)]">
+            <div class="text-center">
+              <div class="text-6xl mb-4">🤖</div>
+              <p class="text-[var(--text-secondary)]">Agentic AI</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RPA & Automation -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="bg-[var(--bg-secondary)] rounded-2xl h-96 flex items-center justify-center border border-[var(--border-color)] order-2 md:order-1">
+            <div class="text-center">
+              <div class="text-6xl mb-4">⚙️</div>
+              <p class="text-[var(--text-secondary)]">RPA & Automation</p>
+            </div>
+          </div>
+          <div class="order-1 md:order-2">
+            <h3 class="text-3xl font-bold mb-4">RPA & Business Process Automation</h3>
+            <p class="text-lg text-[var(--text-secondary)] mb-6">
+              Automate repetitive business processes with robotic process automation. Reduce costs, improve accuracy, and free up your team for strategic work.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Document processing and extraction</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Data entry and validation automation</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Workflow orchestration</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Error handling and monitoring</span>
+              </li>
+            </ul>
+            <a href="/contact/" class="btn btn-primary mt-8">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Stack -->
+  <section class="section bg-[var(--bg-secondary)]">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Our AI Technology Stack</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="card text-center">
+          <div class="text-5xl mb-4">🧠</div>
+          <h3 class="font-bold mb-2">GPT & LLMs</h3>
+          <p class="text-sm text-[var(--text-secondary)]">OpenAI, Claude, and open-source models</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">🔗</div>
+          <h3 class="font-bold mb-2">LangChain</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Framework for building AI applications</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">🤖</div>
+          <h3 class="font-bold mb-2">AutoGen</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Multi-agent conversation framework</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">🎯</div>
+          <h3 class="font-bold mb-2">Prompt Engineering</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Advanced prompt optimization</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">📊</div>
+          <h3 class="font-bold mb-2">ML Models</h3>
+          <p class="text-sm text-[var(--text-secondary)]">TensorFlow, PyTorch, scikit-learn</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">🔍</div>
+          <h3 class="font-bold mb-2">Vector DBs</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Pinecone, Weaviate, Milvus</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">⚡</div>
+          <h3 class="font-bold mb-2">FastAPI</h3>
+          <p class="text-sm text-[var(--text-secondary)]">High-performance API framework</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">☁️</div>
+          <h3 class="font-bold mb-2">Cloud Deployment</h3>
+          <p class="text-sm text-[var(--text-secondary)]">AWS, GCP, Azure integration</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Internal Linking -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Related Services</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <a href="/services/web-development/" class="service-card">
+          <h3 class="text-2xl font-bold mb-2">Web Development</h3>
+          <p class="text-[var(--text-secondary)]">Build web interfaces for your AI solutions</p>
+        </a>
+        
+        <a href="/services/digital-marketing/" class="service-card">
+          <h3 class="text-2xl font-bold mb-2">Digital Marketing</h3>
+          <p class="text-[var(--text-secondary)]">AI-powered marketing automation</p>
+        </a>
+        
+        <a href="/services/maintenance/" class="service-card">
+          <h3 class="text-2xl font-bold mb-2">Maintenance & Support</h3>
+          <p class="text-[var(--text-secondary)]">Keep your AI systems optimized</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-section text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Ready to Transform with AI?</h2>
+        <p class="text-xl mb-8 opacity-90">Let's discuss how AI can revolutionize your business</p>
+        <a href="/contact/" class="inline-block px-8 py-4 bg-white text-[var(--color-navy)] font-bold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300">
+          Schedule a Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

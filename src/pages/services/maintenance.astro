@@ -1,0 +1,291 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'Maintenance & Support Services';
+const description = 'Ongoing support and maintenance to keep your systems running smoothly';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Maintenance & Support",
+  "description": "Ongoing support and maintenance to keep your systems running smoothly"
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-gradient-bg"></div>
+    <div class="container relative z-10">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="animate-slideInLeft">
+          <h1 class="text-5xl md:text-6xl font-bold mb-6">Maintenance & Support</h1>
+          <p class="text-xl text-[var(--text-secondary)] mb-8">
+            Keep your digital assets running smoothly with our comprehensive maintenance and support services. 24/7 monitoring, updates, and optimization.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact/" class="btn btn-primary">Get Support</a>
+            <a href="#sub-services" class="btn btn-outline">View Services</a>
+          </div>
+        </div>
+        
+        <div class="animate-slideInRight">
+          <div class="bg-[var(--bg-secondary)] rounded-2xl p-8 border border-[var(--border-color)]">
+            <div class="space-y-4">
+              <div class="h-3 bg-[var(--color-cyan-lighter)] rounded w-3/4"></div>
+              <div class="h-3 bg-[var(--color-cyan-lighter)] rounded w-full"></div>
+              <div class="h-3 bg-[var(--color-cyan-lighter)] rounded w-5/6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section bg-[var(--bg-secondary)]">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Why Choose Our Support Services?</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="card">
+          <div class="text-4xl mb-4">🛡️</div>
+          <h3 class="text-2xl font-bold mb-2">24/7 Monitoring</h3>
+          <p class="text-[var(--text-secondary)]">Continuous monitoring to catch issues before they impact users</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">⚡</div>
+          <h3 class="text-2xl font-bold mb-2">Fast Response</h3>
+          <p class="text-[var(--text-secondary)]">Quick response times to minimize downtime</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">🔄</div>
+          <h3 class="text-2xl font-bold mb-2">Regular Updates</h3>
+          <p class="text-[var(--text-secondary)]">Keep your systems secure and up-to-date</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">📈</div>
+          <h3 class="text-2xl font-bold mb-2">Performance Optimization</h3>
+          <p class="text-[var(--text-secondary)]">Continuous optimization for better performance</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">🔐</div>
+          <h3 class="text-2xl font-bold mb-2">Security Patches</h3>
+          <p class="text-[var(--text-secondary)]">Proactive security updates and vulnerability fixes</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">👥</div>
+          <h3 class="text-2xl font-bold mb-2">Expert Support Team</h3>
+          <p class="text-[var(--text-secondary)]">Experienced team ready to help anytime</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sub-services Section -->
+  <section id="sub-services" class="section">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Our Support Services</h2>
+      
+      <div class="space-y-12">
+        <!-- Managed Services -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-3xl font-bold mb-4">Managed Services</h3>
+            <p class="text-lg text-[var(--text-secondary)] mb-6">
+              Let us handle the day-to-day maintenance and management of your digital infrastructure. Focus on your business while we keep everything running.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Server and infrastructure management</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Database maintenance and optimization</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Backup and disaster recovery</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Performance monitoring and alerts</span>
+              </li>
+            </ul>
+            <a href="/contact/" class="btn btn-primary mt-8">Get Started</a>
+          </div>
+          <div class="bg-[var(--bg-secondary)] rounded-2xl h-96 flex items-center justify-center border border-[var(--border-color)]">
+            <div class="text-center">
+              <div class="text-6xl mb-4">⚙️</div>
+              <p class="text-[var(--text-secondary)]">Managed Services</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Support -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="bg-[var(--bg-secondary)] rounded-2xl h-96 flex items-center justify-center border border-[var(--border-color)] order-2 md:order-1">
+            <div class="text-center">
+              <div class="text-6xl mb-4">🆘</div>
+              <p class="text-[var(--text-secondary)]">Technical Support</p>
+            </div>
+          </div>
+          <div class="order-1 md:order-2">
+            <h3 class="text-3xl font-bold mb-4">Technical Support & Troubleshooting</h3>
+            <p class="text-lg text-[var(--text-secondary)] mb-6">
+              Get expert help when you need it. Our support team is ready to troubleshoot issues and get your systems back online quickly.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Priority support tickets</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Bug fixes and patches</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Emergency incident response</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Root cause analysis</span>
+              </li>
+            </ul>
+            <a href="/contact/" class="btn btn-primary mt-8">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support Plans -->
+  <section class="section bg-[var(--bg-secondary)]">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Support Plans</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card">
+          <h3 class="text-2xl font-bold mb-4">Basic Support</h3>
+          <p class="text-3xl font-bold text-[var(--color-cyan)] mb-6">$499<span class="text-lg text-[var(--text-secondary)]">/month</span></p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex gap-3">
+              <span class="text-[var(--color-cyan)] font-bold">✓</span>
+              <span>Email support</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-[var(--color-cyan)] font-bold">✓</span>
+              <span>Monthly updates</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-[var(--color-cyan)] font-bold">✓</span>
+              <span>Security patches</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-[var(--color-cyan)] font-bold">✓</span>
+              <span>Performance reports</span>
+            </li>
+          </ul>
+          <a href="/contact/" class="btn btn-outline w-full">Choose Plan</a>
+        </div>
+        
+        <div class="card border-2 border-[var(--color-cyan)]">
+          <div class="bg-[var(--color-cyan)] text-white px-4 py-2 rounded-lg mb-4 inline-block">
+            <span class="font-bold">Popular</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Professional Support</h3>
+          <p class="text-3xl font-bold text-[var(--color-cyan)] mb-6">$999<span class="text-lg text-[var(--text-secondary)]">/month</span></p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex gap-3">
+              <span class="text-[var(--color-cyan)] font-bold">✓</span>
+              <span>Priority support (4h response)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-[var(--color-cyan)] font-bold">✓</span>
+              <span>Weekly updates</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-[var(--color-cyan)] font-bold">✓</span>
+              <span>24/7 monitoring</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-[var(--color-cyan)] font-bold">✓</span>
+              <span>Quarterly optimization</span>
+            </li>
+          </ul>
+          <a href="/contact/" class="btn btn-primary w-full">Choose Plan</a>
+        </div>
+        
+        <div class="card">
+          <h3 class="text-2xl font-bold mb-4">Enterprise Support</h3>
+          <p class="text-3xl font-bold text-[var(--color-cyan)] mb-6">Custom<span class="text-lg text-[var(--text-secondary)]">/month</span></p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex gap-3">
+              <span class="text-[var(--color-cyan)] font-bold">✓</span>
+              <span>Dedicated support team</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-[var(--color-cyan)] font-bold">✓</span>
+              <span>1h response time</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-[var(--color-cyan)] font-bold">✓</span>
+              <span>Continuous optimization</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-[var(--color-cyan)] font-bold">✓</span>
+              <span>Custom SLA</span>
+            </li>
+          </ul>
+          <a href="/contact/" class="btn btn-outline w-full">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Internal Linking -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Related Services</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <a href="/services/web-development/" class="service-card">
+          <h3 class="text-2xl font-bold mb-2">Web Development</h3>
+          <p class="text-[var(--text-secondary)]">Build robust applications we can support</p>
+        </a>
+        
+        <a href="/services/mobile-apps/" class="service-card">
+          <h3 class="text-2xl font-bold mb-2">Mobile Apps</h3>
+          <p class="text-[var(--text-secondary)]">Keep your apps updated and secure</p>
+        </a>
+        
+        <a href="/services/ai-workflows/" class="service-card">
+          <h3 class="text-2xl font-bold mb-2">AI Workflows</h3>
+          <p class="text-[var(--text-secondary)]">Maintain and optimize your AI systems</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-section text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Ready for Reliable Support?</h2>
+        <p class="text-xl mb-8 opacity-90">Let us handle your maintenance so you can focus on your business</p>
+        <a href="/contact/" class="inline-block px-8 py-4 bg-white text-[var(--color-navy)] font-bold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300">
+          Schedule a Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,45 @@
+# Robots.txt for Intention InfoService
+# Last updated: 2024-01-22
+
+# Allow all bots to crawl the site
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /private/
+Disallow: /.env
+Disallow: /node_modules/
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+
+# Specific rules for AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Sitemap location
+Sitemap: https://intention-infoservice.com/sitemap.xml
+Sitemap: https://intention-infoservice.com/sitemap-services.xml
+Sitemap: https://intention-infoservice.com/sitemap-blog.xml
+
+# Crawl delay (in seconds)
+Crawl-delay: 0.5
+
+# Request rate (pages per second)
+Request-rate: 10/1s

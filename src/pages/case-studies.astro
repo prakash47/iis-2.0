@@ -1,0 +1,279 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Case Studies';
+const description = 'Explore our successful projects and see how we have helped clients achieve their goals';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Case Studies"
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-gradient-bg"></div>
+    <div class="container relative z-10">
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">Case Studies</h1>
+        <p class="text-xl text-[var(--text-secondary)]">
+          Explore how we have helped businesses transform their operations and achieve remarkable results
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Case Study 1 -->
+        <a href="#case-study-1" class="service-card">
+          <div class="mb-4">
+            <span class="inline-block px-3 py-1 bg-[var(--color-cyan-lighter)] text-[var(--color-navy)] rounded-full text-sm font-semibold">Web Development</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">E-Commerce Platform Transformation</h3>
+          <p class="text-[var(--text-secondary)] mb-4">
+            Helped a retail company build a high-performance e-commerce platform that increased online sales by 250%
+          </p>
+          <div class="flex gap-4 text-sm text-[var(--text-secondary)]">
+            <span>📈 +250% Sales</span>
+            <span>⚡ 100/100 Performance</span>
+          </div>
+        </a>
+
+        <!-- Case Study 2 -->
+        <a href="#case-study-2" class="service-card">
+          <div class="mb-4">
+            <span class="inline-block px-3 py-1 bg-[var(--color-cyan-lighter)] text-[var(--color-navy)] rounded-full text-sm font-semibold">Mobile Apps</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">Cross-Platform Mobile App</h3>
+          <p class="text-[var(--text-secondary)] mb-4">
+            Developed a React Native app for a fintech startup, reaching 100K+ users in 6 months
+          </p>
+          <div class="flex gap-4 text-sm text-[var(--text-secondary)]">
+            <span>👥 100K+ Users</span>
+            <span>⭐ 4.8 Rating</span>
+          </div>
+        </a>
+
+        <!-- Case Study 3 -->
+        <a href="#case-study-3" class="service-card">
+          <div class="mb-4">
+            <span class="inline-block px-3 py-1 bg-[var(--color-cyan-lighter)] text-[var(--color-navy)] rounded-full text-sm font-semibold">AI Workflows</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">AI-Powered Customer Service</h3>
+          <p class="text-[var(--text-secondary)] mb-4">
+            Implemented an AI chatbot that reduced customer support costs by 60% while improving satisfaction
+          </p>
+          <div class="flex gap-4 text-sm text-[var(--text-secondary)]">
+            <span>💰 -60% Costs</span>
+            <span>😊 +40% Satisfaction</span>
+          </div>
+        </a>
+
+        <!-- Case Study 4 -->
+        <a href="#case-study-4" class="service-card">
+          <div class="mb-4">
+            <span class="inline-block px-3 py-1 bg-[var(--color-cyan-lighter)] text-[var(--color-navy)] rounded-full text-sm font-semibold">Digital Marketing</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">SaaS Growth Strategy</h3>
+          <p class="text-[var(--text-secondary)] mb-4">
+            Developed and executed a comprehensive digital marketing strategy that grew MRR from $10K to $100K
+          </p>
+          <div class="flex gap-4 text-sm text-[var(--text-secondary)]">
+            <span>📊 10x Growth</span>
+            <span>🎯 Targeted Campaigns</span>
+          </div>
+        </a>
+
+        <!-- Case Study 5 -->
+        <a href="#case-study-5" class="service-card">
+          <div class="mb-4">
+            <span class="inline-block px-3 py-1 bg-[var(--color-cyan-lighter)] text-[var(--color-navy)] rounded-full text-sm font-semibold">UI/UX Design</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">Brand Redesign & Refresh</h3>
+          <p class="text-[var(--text-secondary)] mb-4">
+            Complete brand identity redesign that increased user engagement by 85% and improved brand perception
+          </p>
+          <div class="flex gap-4 text-sm text-[var(--text-secondary)]">
+            <span>🎨 New Identity</span>
+            <span>📈 +85% Engagement</span>
+          </div>
+        </a>
+
+        <!-- Case Study 6 -->
+        <a href="#case-study-6" class="service-card">
+          <div class="mb-4">
+            <span class="inline-block px-3 py-1 bg-[var(--color-cyan-lighter)] text-[var(--color-navy)] rounded-full text-sm font-semibold">Custom Solutions</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">Enterprise ERP Implementation</h3>
+          <p class="text-[var(--text-secondary)] mb-4">
+            Built a custom ERP system that streamlined operations and reduced manual work by 70%
+          </p>
+          <div class="flex gap-4 text-sm text-[var(--text-secondary)]">
+            <span>⚙️ Custom ERP</span>
+            <span>⏱️ -70% Manual Work</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section -->
+  <section class="section bg-[var(--bg-secondary)]">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Our Impact</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="card text-center">
+          <div class="text-5xl font-bold text-[var(--color-cyan)] mb-2">150+</div>
+          <p class="text-[var(--text-secondary)]">Projects Delivered</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl font-bold text-[var(--color-cyan)] mb-2">$500M+</div>
+          <p class="text-[var(--text-secondary)]">Client Revenue Generated</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl font-bold text-[var(--color-cyan)] mb-2">98%</div>
+          <p class="text-[var(--text-secondary)]">Client Satisfaction Rate</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl font-bold text-[var(--color-cyan)] mb-2">50+</div>
+          <p class="text-[var(--text-secondary)]">Long-Term Partnerships</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Industries We Serve</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="card text-center">
+          <div class="text-4xl mb-4">🏥</div>
+          <h3 class="font-bold mb-2">Healthcare</h3>
+          <p class="text-sm text-[var(--text-secondary)]">HIPAA compliant solutions</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-4xl mb-4">💰</div>
+          <h3 class="font-bold mb-2">Finance</h3>
+          <p class="text-sm text-[var(--text-secondary)]">PCI compliant systems</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-4xl mb-4">🛍️</div>
+          <h3 class="font-bold mb-2">E-Commerce</h3>
+          <p class="text-sm text-[var(--text-secondary)]">High-conversion platforms</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-4xl mb-4">🏢</div>
+          <h3 class="font-bold mb-2">Enterprise</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Large-scale solutions</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-4xl mb-4">🚀</div>
+          <h3 class="font-bold mb-2">SaaS</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Scalable applications</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-4xl mb-4">🎓</div>
+          <h3 class="font-bold mb-2">Education</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Learning platforms</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-4xl mb-4">🏭</div>
+          <h3 class="font-bold mb-2">Manufacturing</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Industry 4.0 solutions</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-4xl mb-4">📱</div>
+          <h3 class="font-bold mb-2">Media & Tech</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Digital platforms</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section bg-[var(--bg-secondary)]">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Client Testimonials</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="card">
+          <div class="flex gap-1 mb-4">
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+          </div>
+          <p class="text-[var(--text-secondary)] mb-4">
+            "Working with Intention InfoService was transformative. They understood our vision and delivered beyond expectations. Highly recommended!"
+          </p>
+          <p class="font-bold">Sarah Chen</p>
+          <p class="text-sm text-[var(--text-secondary)]">CEO, TechStartup Inc</p>
+        </div>
+        
+        <div class="card">
+          <div class="flex gap-1 mb-4">
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+          </div>
+          <p class="text-[var(--text-secondary)] mb-4">
+            "The team's expertise in AI and automation helped us reduce costs significantly. They're true partners in our success."
+          </p>
+          <p class="font-bold">Michael Rodriguez</p>
+          <p class="text-sm text-[var(--text-secondary)]">COO, Enterprise Corp</p>
+        </div>
+        
+        <div class="card">
+          <div class="flex gap-1 mb-4">
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+            <span class="text-yellow-400">⭐</span>
+          </div>
+          <p class="text-[var(--text-secondary)] mb-4">
+            "Professional, responsive, and incredibly talented. They delivered our project on time and under budget. Exceptional work!"
+          </p>
+          <p class="font-bold">Emily Thompson</p>
+          <p class="text-sm text-[var(--text-secondary)]">Founder, Digital Agency</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-section text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Ready to Become Our Next Success Story?</h2>
+        <p class="text-xl mb-8 opacity-90">Let's discuss how we can help you achieve remarkable results</p>
+        <a href="/contact/" class="inline-block px-8 py-4 bg-white text-[var(--color-navy)] font-bold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300">
+          Start Your Project
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

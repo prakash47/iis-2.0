@@ -1,0 +1,275 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'Web Development Services';
+const description = 'High-performance websites and web applications built with cutting-edge technologies';
+
+// JSON-LD Schema
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Web Development",
+  "description": "High-performance websites and web applications built with cutting-edge technologies",
+  "provider": {
+    "@type": "Organization",
+    "name": "Intention InfoService"
+  },
+  "areaServed": "Worldwide",
+  "hasOfferingDetails": {
+    "@type": "OfferingDetails",
+    "priceCurrency": "USD"
+  }
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-gradient-bg"></div>
+    <div class="container relative z-10">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="animate-slideInLeft">
+          <h1 class="text-5xl md:text-6xl font-bold mb-6">Web Development</h1>
+          <p class="text-xl text-[var(--text-secondary)] mb-8">
+            We create high-performance, scalable web applications that drive business results. From responsive websites to complex web platforms, we deliver excellence.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact/" class="btn btn-primary">Start Your Project</a>
+            <a href="#sub-services" class="btn btn-outline">View Services</a>
+          </div>
+        </div>
+        
+        <div class="animate-slideInRight">
+          <div class="bg-[var(--bg-secondary)] rounded-2xl p-8 border border-[var(--border-color)]">
+            <div class="space-y-4">
+              <div class="h-3 bg-[var(--color-cyan-lighter)] rounded w-3/4"></div>
+              <div class="h-3 bg-[var(--color-cyan-lighter)] rounded w-full"></div>
+              <div class="h-3 bg-[var(--color-cyan-lighter)] rounded w-5/6"></div>
+              <div class="h-3 bg-[var(--color-cyan-lighter)] rounded w-4/5"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section bg-[var(--bg-secondary)]">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Why Choose Our Web Development?</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="card">
+          <div class="text-4xl mb-4">⚡</div>
+          <h3 class="text-2xl font-bold mb-2">Lightning Fast</h3>
+          <p class="text-[var(--text-secondary)]">Optimized for speed with 100/100 Lighthouse scores and sub-second load times</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">🔒</div>
+          <h3 class="text-2xl font-bold mb-2">Secure & Reliable</h3>
+          <p class="text-[var(--text-secondary)]">Enterprise-grade security, SSL encryption, and 99.9% uptime guarantee</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">📱</div>
+          <h3 class="text-2xl font-bold mb-2">Responsive Design</h3>
+          <p class="text-[var(--text-secondary)]">Perfect experience on all devices from mobile to desktop</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">🎯</div>
+          <h3 class="text-2xl font-bold mb-2">SEO Optimized</h3>
+          <p class="text-[var(--text-secondary)]">Built for search engines with structured data and best practices</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">♿</div>
+          <h3 class="text-2xl font-bold mb-2">Accessible</h3>
+          <p class="text-[var(--text-secondary)]">WCAG compliant with full accessibility support for all users</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">🚀</div>
+          <h3 class="text-2xl font-bold mb-2">Scalable</h3>
+          <p class="text-[var(--text-secondary)]">Built to grow with your business, handling millions of users</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sub-services Section -->
+  <section id="sub-services" class="section">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Our Web Development Services</h2>
+      
+      <div class="space-y-12">
+        <!-- E-commerce -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-3xl font-bold mb-4">E-Commerce Solutions</h3>
+            <p class="text-lg text-[var(--text-secondary)] mb-6">
+              Build powerful online stores that convert visitors into customers. We create e-commerce platforms with seamless checkout, inventory management, and payment integration.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Shopping cart optimization</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Payment gateway integration</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Inventory management system</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Customer analytics dashboard</span>
+              </li>
+            </ul>
+            <a href="/contact/" class="btn btn-primary mt-8">Get Started</a>
+          </div>
+          <div class="bg-[var(--bg-secondary)] rounded-2xl h-96 flex items-center justify-center border border-[var(--border-color)]">
+            <div class="text-center">
+              <div class="text-6xl mb-4">🛍️</div>
+              <p class="text-[var(--text-secondary)]">E-Commerce Platform</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Headless CMS -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="bg-[var(--bg-secondary)] rounded-2xl h-96 flex items-center justify-center border border-[var(--border-color)] order-2 md:order-1">
+            <div class="text-center">
+              <div class="text-6xl mb-4">📝</div>
+              <p class="text-[var(--text-secondary)]">Headless CMS</p>
+            </div>
+          </div>
+          <div class="order-1 md:order-2">
+            <h3 class="text-3xl font-bold mb-4">Headless CMS Platforms</h3>
+            <p class="text-lg text-[var(--text-secondary)] mb-6">
+              Decouple your content management from presentation. We build headless CMS solutions that give you flexibility and control over your content across multiple channels.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Sanity.io integration</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Multi-channel content delivery</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>API-first architecture</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Real-time content updates</span>
+              </li>
+            </ul>
+            <a href="/contact/" class="btn btn-primary mt-8">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Stack -->
+  <section class="section bg-[var(--bg-secondary)]">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Our Technology Stack</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="card text-center">
+          <div class="text-5xl mb-4">⚛️</div>
+          <h3 class="font-bold mb-2">React</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Modern UI framework for interactive applications</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">🚀</div>
+          <h3 class="font-bold mb-2">Next.js</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Full-stack React framework with SSR and static generation</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">🌌</div>
+          <h3 class="font-bold mb-2">Astro</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Zero-JS by default static site generator</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">🎨</div>
+          <h3 class="font-bold mb-2">Tailwind CSS</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Utility-first CSS framework for rapid design</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">🗄️</div>
+          <h3 class="font-bold mb-2">PostgreSQL</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Robust relational database for complex data</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">⚡</div>
+          <h3 class="font-bold mb-2">Node.js</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Scalable backend runtime environment</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">🔐</div>
+          <h3 class="font-bold mb-2">TypeScript</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Type-safe JavaScript for robust code</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">☁️</div>
+          <h3 class="font-bold mb-2">Cloud Deployment</h3>
+          <p class="text-sm text-[var(--text-secondary)]">AWS, Vercel, and Netlify deployment options</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Internal Linking to Related Services -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Related Services</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <a href="/services/ui-ux-branding/" class="service-card">
+          <h3 class="text-2xl font-bold mb-2">UI/UX Branding</h3>
+          <p class="text-[var(--text-secondary)]">Beautiful, intuitive designs that work seamlessly with your web applications</p>
+        </a>
+        
+        <a href="/services/digital-marketing/" class="service-card">
+          <h3 class="text-2xl font-bold mb-2">Digital Marketing</h3>
+          <p class="text-[var(--text-secondary)]">Drive traffic and conversions to your web properties</p>
+        </a>
+        
+        <a href="/services/maintenance/" class="service-card">
+          <h3 class="text-2xl font-bold mb-2">Maintenance & Support</h3>
+          <p class="text-[var(--text-secondary)]">Keep your web applications running smoothly</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-section text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Ready to Build Your Web Solution?</h2>
+        <p class="text-xl mb-8 opacity-90">Let's discuss how we can help you achieve your web development goals</p>
+        <a href="/contact/" class="inline-block px-8 py-4 bg-white text-[var(--color-navy)] font-bold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300">
+          Schedule a Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

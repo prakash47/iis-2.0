@@ -1,0 +1,268 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'Mobile App Development Services';
+const description = 'Native and cross-platform mobile applications for iOS and Android';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Mobile App Development",
+  "description": "Native and cross-platform mobile applications for iOS and Android",
+  "provider": {
+    "@type": "Organization",
+    "name": "Intention InfoService"
+  }
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-gradient-bg"></div>
+    <div class="container relative z-10">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="animate-slideInLeft">
+          <h1 class="text-5xl md:text-6xl font-bold mb-6">Mobile App Development</h1>
+          <p class="text-xl text-[var(--text-secondary)] mb-8">
+            Create powerful mobile applications that engage users and drive business growth. We build native and cross-platform apps for iOS and Android.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact/" class="btn btn-primary">Start Your App</a>
+            <a href="#sub-services" class="btn btn-outline">View Services</a>
+          </div>
+        </div>
+        
+        <div class="animate-slideInRight">
+          <div class="bg-[var(--bg-secondary)] rounded-2xl p-8 border border-[var(--border-color)]">
+            <div class="space-y-4">
+              <div class="h-3 bg-[var(--color-cyan-lighter)] rounded w-3/4"></div>
+              <div class="h-3 bg-[var(--color-cyan-lighter)] rounded w-full"></div>
+              <div class="h-3 bg-[var(--color-cyan-lighter)] rounded w-5/6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section bg-[var(--bg-secondary)]">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Why Choose Our Mobile Development?</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="card">
+          <div class="text-4xl mb-4">📱</div>
+          <h3 class="text-2xl font-bold mb-2">Native Performance</h3>
+          <p class="text-[var(--text-secondary)]">Optimized for each platform with native APIs and maximum performance</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">🎯</div>
+          <h3 class="text-2xl font-bold mb-2">User-Centric Design</h3>
+          <p class="text-[var(--text-secondary)]">Intuitive interfaces that users love and keep coming back to</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">🔄</div>
+          <h3 class="text-2xl font-bold mb-2">Cross-Platform</h3>
+          <p class="text-[var(--text-secondary)]">Reach both iOS and Android users with efficient development</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">🔐</div>
+          <h3 class="text-2xl font-bold mb-2">Secure & Compliant</h3>
+          <p class="text-[var(--text-secondary)]">Enterprise-grade security and compliance with app store requirements</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">📊</div>
+          <h3 class="text-2xl font-bold mb-2">Analytics & Insights</h3>
+          <p class="text-[var(--text-secondary)]">Built-in analytics to understand user behavior and optimize</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">🚀</div>
+          <h3 class="text-2xl font-bold mb-2">App Store Ready</h3>
+          <p class="text-[var(--text-secondary)]">Fully optimized for App Store and Google Play deployment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sub-services Section -->
+  <section id="sub-services" class="section">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Our Mobile Services</h2>
+      
+      <div class="space-y-12">
+        <!-- iOS & Android Native -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-3xl font-bold mb-4">iOS & Android Native Apps</h3>
+            <p class="text-lg text-[var(--text-secondary)] mb-6">
+              Build native applications that deliver the best performance and user experience on each platform. We use Swift for iOS and Kotlin for Android.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Swift development for iOS</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Kotlin development for Android</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Native API integration</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>App Store & Play Store optimization</span>
+              </li>
+            </ul>
+            <a href="/contact/" class="btn btn-primary mt-8">Get Started</a>
+          </div>
+          <div class="bg-[var(--bg-secondary)] rounded-2xl h-96 flex items-center justify-center border border-[var(--border-color)]">
+            <div class="text-center">
+              <div class="text-6xl mb-4">📱</div>
+              <p class="text-[var(--text-secondary)]">Native Mobile Apps</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cross-Platform -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="bg-[var(--bg-secondary)] rounded-2xl h-96 flex items-center justify-center border border-[var(--border-color)] order-2 md:order-1">
+            <div class="text-center">
+              <div class="text-6xl mb-4">🔄</div>
+              <p class="text-[var(--text-secondary)]">Cross-Platform</p>
+            </div>
+          </div>
+          <div class="order-1 md:order-2">
+            <h3 class="text-3xl font-bold mb-4">Cross-Platform Development</h3>
+            <p class="text-lg text-[var(--text-secondary)] mb-6">
+              Reach both iOS and Android with a single codebase. We use React Native and Flutter for efficient cross-platform development.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>React Native development</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Flutter development</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Code sharing and reusability</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-[var(--color-cyan)] font-bold">✓</span>
+                <span>Faster time to market</span>
+              </li>
+            </ul>
+            <a href="/contact/" class="btn btn-primary mt-8">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Stack -->
+  <section class="section bg-[var(--bg-secondary)]">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Our Technology Stack</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="card text-center">
+          <div class="text-5xl mb-4">🍎</div>
+          <h3 class="font-bold mb-2">Swift</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Modern iOS development language</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">🤖</div>
+          <h3 class="font-bold mb-2">Kotlin</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Modern Android development language</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">⚛️</div>
+          <h3 class="font-bold mb-2">React Native</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Cross-platform mobile framework</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">🎨</div>
+          <h3 class="font-bold mb-2">Flutter</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Google's cross-platform framework</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">🔥</div>
+          <h3 class="font-bold mb-2">Firebase</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Backend and real-time database</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">☁️</div>
+          <h3 class="font-bold mb-2">Cloud Services</h3>
+          <p class="text-sm text-[var(--text-secondary)]">AWS and Google Cloud integration</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">🧪</div>
+          <h3 class="font-bold mb-2">Testing</h3>
+          <p class="text-sm text-[var(--text-secondary)]">XCTest, Espresso, and Jest</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="text-5xl mb-4">📊</div>
+          <h3 class="font-bold mb-2">Analytics</h3>
+          <p class="text-sm text-[var(--text-secondary)]">Firebase Analytics and Mixpanel</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Internal Linking -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Related Services</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <a href="/services/web-development/" class="service-card">
+          <h3 class="text-2xl font-bold mb-2">Web Development</h3>
+          <p class="text-[var(--text-secondary)]">Complement your mobile app with a powerful web platform</p>
+        </a>
+        
+        <a href="/services/ui-ux-branding/" class="service-card">
+          <h3 class="text-2xl font-bold mb-2">UI/UX Branding</h3>
+          <p class="text-[var(--text-secondary)]">Beautiful mobile interfaces that users love</p>
+        </a>
+        
+        <a href="/services/maintenance/" class="service-card">
+          <h3 class="text-2xl font-bold mb-2">Maintenance & Support</h3>
+          <p class="text-[var(--text-secondary)]">Keep your app updated and running smoothly</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-section text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Ready to Build Your Mobile App?</h2>
+        <p class="text-xl mb-8 opacity-90">Let's create an app that your users will love</p>
+        <a href="/contact/" class="inline-block px-8 py-4 bg-white text-[var(--color-navy)] font-bold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300">
+          Schedule a Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

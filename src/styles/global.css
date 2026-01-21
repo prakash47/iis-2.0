@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Color Variables - Light Mode */
+:root {
+  /* Brand Colors */
+  --color-navy: #0F2B5C;
+  --color-cyan: #0099CC;
+  --color-cyan-light: #66D4FF;
+  --color-cyan-lighter: #E6F5FF;
+  
+  /* Neutral Colors */
+  --color-white: #FFFFFF;
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-200: #E5E7EB;
+  --color-gray-300: #D1D5DB;
+  --color-gray-400: #9CA3AF;
+  --color-gray-500: #6B7280;
+  --color-gray-600: #4B5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1F2937;
+  --color-gray-900: #111827;
+  
+  /* Semantic Colors */
+  --bg-primary: var(--color-white);
+  --bg-secondary: var(--color-gray-50);
+  --bg-tertiary: var(--color-cyan-lighter);
+  --text-primary: var(--color-gray-900);
+  --text-secondary: var(--color-gray-600);
+  --text-tertiary: var(--color-gray-500);
+  --border-color: var(--color-gray-200);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Color Variables - Dark Mode */
+html.dark {
+  --bg-primary: #0F1419;
+  --bg-secondary: #1A1F2E;
+  --bg-tertiary: #1E3A4C;
+  --text-primary: #F3F4F6;
+  --text-secondary: #D1D5DB;
+  --text-tertiary: #9CA3AF;
+  --border-color: #374151;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+}
+
+/* Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-200;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-navy);
+}
+
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6 {
+  color: var(--color-white);
+}
+
+h1 {
+  @apply text-4xl md:text-5xl lg:text-6xl;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl lg:text-5xl;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl;
+}
+
+p {
+  @apply text-base md:text-lg leading-relaxed;
+  color: var(--text-secondary);
+}
+
+/* Links */
+a {
+  @apply transition-colors duration-200;
+  color: var(--color-cyan);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-navy);
+}
+
+html.dark a:hover {
+  color: var(--color-cyan-light);
+}
+
+/* Buttons */
+.btn {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-300 cursor-pointer;
+}
+
+.btn-primary {
+  @apply bg-[var(--color-navy)] text-white hover:shadow-lg hover:scale-105;
+}
+
+.btn-secondary {
+  @apply bg-[var(--color-cyan)] text-white hover:shadow-lg hover:scale-105;
+}
+
+.btn-outline {
+  @apply border-2 border-[var(--color-navy)] text-[var(--color-navy)] hover:bg-[var(--color-navy)] hover:text-white;
+}
+
+html.dark .btn-outline {
+  @apply border-[var(--color-cyan)] text-[var(--color-cyan)] hover:bg-[var(--color-cyan)] hover:text-[var(--color-navy)];
+}
+
+/* Cards */
+.card {
+  @apply bg-[var(--bg-secondary)] rounded-lg p-6 transition-all duration-300 border border-[var(--border-color)];
+}
+
+.card:hover {
+  @apply shadow-lg translate-y-[-4px];
+}
+
+/* Containers */
+.container {
+  @apply max-w-7xl mx-auto px-4 md:px-6 lg:px-8;
+}
+
+/* Section Spacing */
+.section {
+  @apply py-16 md:py-24 lg:py-32;
+}
+
+/* Gradient Backgrounds */
+.gradient-navy-cyan {
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-cyan) 100%);
+}
+
+.gradient-cyan-light {
+  background: linear-gradient(135deg, var(--color-cyan) 0%, var(--color-cyan-light) 100%);
+}
+
+/* Utility Classes */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.accent-line {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.accent-line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--color-cyan);
+  border-radius: 2px;
+}
+
+/* Smooth Transitions */
+.transition-smooth {
+  @apply transition-all duration-300 ease-out;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-cyan);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-navy);
+}
+
+/* Focus Styles */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-[var(--color-cyan)];
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.6s ease-out;
+}
+
+/* Responsive Grid */
+.grid-auto {
+  @apply grid gap-6 md:gap-8;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Hero Section Styles */
+.hero-section {
+  @apply relative overflow-hidden py-20 md:py-32;
+}
+
+.hero-gradient-bg {
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--color-cyan-light) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+html.dark .hero-gradient-bg {
+  opacity: 0.05;
+}
+
+/* Service Card Styles */
+.service-card {
+  @apply card;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:is(a) {
+  display: block;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-cyan);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-card-icon {
+  @apply w-12 h-12 rounded-lg bg-[var(--color-cyan-lighter)] flex items-center justify-center text-[var(--color-navy)] mb-4 transition-transform duration-300 group-hover:scale-110;
+}
+
+html.dark .service-card-icon {
+  @apply bg-[var(--color-navy)];
+}
+
+/* CTA Section */
+.cta-section {
+  @apply bg-gradient-to-r from-[var(--color-navy)] to-[var(--color-cyan)] text-white py-16 md:py-24 rounded-2xl;
+}
+
+/* Footer */
+.footer-link {
+  @apply text-[var(--text-secondary)] hover:text-[var(--color-cyan)] transition-colors duration-200;
+}
+
+html.dark .footer-link:hover {
+  color: var(--color-cyan-light);
+}

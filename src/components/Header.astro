@@ -1,0 +1,370 @@
+---
+// Header Component with Mega Menu and Mobile Navigation
+
+const services = [
+  {
+    title: "Web Development",
+    description: "High-performance websites and applications",
+    href: "/services/web-development/",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>`
+  },
+  {
+    title: "Mobile Apps",
+    description: "Native and cross-platform mobile solutions",
+    href: "/services/mobile-apps/",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`
+  },
+  {
+    title: "AI Workflows",
+    description: "Intelligent automation and agentic AI",
+    href: "/services/ai-workflows/",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>`
+  },
+  {
+    title: "UI/UX & Branding",
+    description: "Beautiful designs that elevate your brand",
+    href: "/services/ui-ux-branding/",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>`
+  },
+  {
+    title: "Digital Marketing",
+    description: "Strategic marketing to grow your presence",
+    href: "/services/digital-marketing/",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>`
+  },
+  {
+    title: "Maintenance & Support",
+    description: "Ongoing support for your systems",
+    href: "/services/maintenance/",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`
+  },
+  {
+    title: "Custom Solutions",
+    description: "Tailored solutions for unique needs",
+    href: "/services/custom-solutions/",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>`
+  }
+];
+---
+
+<header class="sticky top-0 z-50 bg-[var(--bg-primary)]/95 border-b border-gray-200 dark:border-gray-700 backdrop-blur-md transition-colors duration-200">
+  <div class="container flex items-center justify-between h-16 md:h-20">
+    <!-- Logo -->
+    <a href="/" class="flex items-center group relative z-50">
+      <img src="/images/logo.png" alt="Intention InfoService" class="h-10 md:h-14 w-auto transition-transform duration-300 group-hover:scale-110" />
+    </a>
+    
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex items-center gap-8">
+      <!-- Services with Mega Menu -->
+      <div class="mega-menu-container relative">
+        <a href="/services/" class="nav-link flex items-center gap-1 text-gray-600 dark:text-gray-300 hover:text-[#0099CC] transition-colors py-6">
+          Services
+          <svg class="w-4 h-4 transition-transform duration-200 chevron-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </a>
+        
+        <!-- Mega Menu Dropdown -->
+        <div class="mega-menu absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible translate-y-2 transition-all duration-300">
+          <div class="bg-[var(--bg-primary)] rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 p-6 min-w-[700px]">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-6 pb-4 border-b border-gray-200 dark:border-gray-700">
+              <div>
+                <h3 class="text-lg font-bold text-[var(--color-navy)] dark:text-white">Our Services</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Comprehensive digital solutions for your business</p>
+              </div>
+              <a href="/services/" class="text-sm font-medium text-[#0099CC] hover:text-[#0F2B5C] dark:hover:text-[#66D4FF] transition-colors flex items-center gap-1">
+                View All
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+            
+            <!-- Services Grid -->
+            <div class="grid grid-cols-2 gap-3">
+              {services.map((service) => (
+                <a href={service.href} class="mega-menu-item group flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-200">
+                  <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-[#0099CC]/10 to-[#0F2B5C]/10 dark:from-[#0099CC]/20 dark:to-[#0F2B5C]/20 flex items-center justify-center text-[#0099CC] group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-[#0099CC] group-hover:to-[#0F2B5C] group-hover:text-white transition-all duration-300">
+                    <Fragment set:html={service.icon} />
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h4 class="font-semibold text-gray-900 dark:text-white group-hover:text-[#0099CC] dark:group-hover:text-[#66D4FF] transition-colors">{service.title}</h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5 line-clamp-1">{service.description}</p>
+                  </div>
+                  <svg class="w-5 h-5 text-gray-300 dark:text-gray-600 group-hover:text-[#0099CC] group-hover:translate-x-1 transition-all duration-200 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              ))}
+            </div>
+            
+            <!-- Footer CTA -->
+            <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700 bg-gradient-to-r from-[#0F2B5C]/5 to-[#0099CC]/5 dark:from-[#0F2B5C]/20 dark:to-[#0099CC]/20 rounded-xl p-4 -mx-2">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="font-medium text-gray-900 dark:text-white">Need a custom solution?</p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">Let's discuss your unique requirements</p>
+                </div>
+                <a href="/contact/" class="btn btn-primary text-sm px-4 py-2">
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <a href="/case-studies/" class="text-gray-600 dark:text-gray-300 hover:text-[#0099CC] transition-colors">Case Studies</a>
+      <a href="/blog/" class="text-gray-600 dark:text-gray-300 hover:text-[#0099CC] transition-colors">Blog</a>
+      <a href="/about/" class="text-gray-600 dark:text-gray-300 hover:text-[#0099CC] transition-colors">About</a>
+    </nav>
+    
+    <!-- Desktop Actions -->
+    <div class="hidden lg:flex items-center gap-4">
+      <button onclick="window.toggleTheme()" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle theme">
+        <svg class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+        </svg>
+        <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.536l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm5.657-9.193a1 1 0 00-1.414 0l-.707.707A1 1 0 005.05 3.536l.707-.707a1 1 0 011.414 0zM3 8a1 1 0 100-2H2a1 1 0 100 2h1z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+      
+      <a href="/contact/" class="btn btn-primary">Get Started</a>
+    </div>
+    
+    <!-- Mobile Actions -->
+    <div class="flex lg:hidden items-center gap-2">
+      <button onclick="window.toggleTheme()" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle theme">
+        <svg class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+        </svg>
+        <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.536l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+      
+      <!-- Hamburger Menu Button -->
+      <button 
+        id="mobile-menu-toggle" 
+        class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors relative z-50"
+        aria-label="Toggle mobile menu"
+        aria-expanded="false"
+      >
+        <svg class="hamburger-icon w-6 h-6 text-gray-700 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg class="close-icon w-6 h-6 text-gray-700 dark:text-gray-200 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 opacity-0 invisible transition-all duration-300 lg:hidden"></div>
+  
+  <!-- Mobile Menu Panel -->
+  <div id="mobile-menu" class="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-[var(--bg-primary)] z-40 transform translate-x-full transition-transform duration-300 ease-out lg:hidden overflow-y-auto">
+    <div class="p-6 pt-20">
+      <!-- Mobile Navigation Links -->
+      <nav class="space-y-2">
+        <!-- Services Accordion -->
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-trigger w-full flex items-center justify-between py-3 px-4 rounded-xl text-left font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+            <span>Services</span>
+            <svg class="accordion-chevron w-5 h-5 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="mobile-accordion-content hidden">
+            <div class="pl-4 py-2 space-y-1">
+              {services.map((service) => (
+                <a href={service.href} class="flex items-center gap-3 py-3 px-4 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 hover:text-[#0099CC] transition-all">
+                  <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#0099CC]/10 to-[#0F2B5C]/10 dark:from-[#0099CC]/20 dark:to-[#0F2B5C]/20 flex items-center justify-center text-[#0099CC] flex-shrink-0">
+                    <Fragment set:html={service.icon.replace('w-6 h-6', 'w-4 h-4')} />
+                  </div>
+                  <span class="text-sm font-medium">{service.title}</span>
+                </a>
+              ))}
+              <a href="/services/" class="flex items-center gap-3 py-3 px-4 rounded-lg text-[#0099CC] hover:bg-[#0099CC]/10 transition-all font-medium">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+                <span class="text-sm">View All Services</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <a href="/case-studies/" class="flex items-center py-3 px-4 rounded-xl font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+          Case Studies
+        </a>
+        
+        <a href="/blog/" class="flex items-center py-3 px-4 rounded-xl font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+          Blog
+        </a>
+        
+        <a href="/about/" class="flex items-center py-3 px-4 rounded-xl font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+          About
+        </a>
+        
+        <a href="/contact/" class="flex items-center py-3 px-4 rounded-xl font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+          Contact
+        </a>
+      </nav>
+      
+      <!-- Mobile CTA -->
+      <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+        <a href="/contact/" class="btn btn-primary w-full justify-center text-center">
+          Get Started
+        </a>
+        <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-4">
+          Let's build something amazing together
+        </p>
+      </div>
+      
+      <!-- Social Links -->
+      <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+        <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">Connect with us</p>
+        <div class="flex items-center gap-4">
+          <a href="https://twitter.com" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-[#0099CC] hover:text-white transition-all">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://linkedin.com" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-[#0099CC] hover:text-white transition-all">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://github.com" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-[#0099CC] hover:text-white transition-all">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  /* Mega Menu Hover Styles (Desktop) */
+  .mega-menu-container:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+  
+  .mega-menu-container:hover .chevron-icon {
+    transform: rotate(180deg);
+  }
+  
+  /* Smooth shadow for mega menu */
+  .mega-menu > div {
+    box-shadow: 
+      0 25px 50px -12px rgba(0, 0, 0, 0.15),
+      0 0 0 1px rgba(0, 0, 0, 0.05);
+  }
+  
+  html.dark .mega-menu > div {
+    box-shadow: 
+      0 25px 50px -12px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Line clamp utility */
+  .line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Mobile Menu Active States */
+  .mobile-menu-open #mobile-menu {
+    transform: translateX(0);
+  }
+  
+  .mobile-menu-open #mobile-menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .mobile-menu-open .hamburger-icon {
+    display: none;
+  }
+  
+  .mobile-menu-open .close-icon {
+    display: block;
+  }
+  
+  /* Mobile Accordion */
+  .mobile-accordion.active .accordion-chevron {
+    transform: rotate(180deg);
+  }
+  
+  .mobile-accordion.active .mobile-accordion-content {
+    display: block;
+  }
+  
+  /* Mobile Menu Shadow */
+  #mobile-menu {
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  html.dark #mobile-menu {
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.4);
+  }
+</style>
+
+<script>
+  // Mobile Menu Toggle
+  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+  const body = document.body;
+  
+  function toggleMobileMenu() {
+    body.classList.toggle('mobile-menu-open');
+    const isOpen = body.classList.contains('mobile-menu-open');
+    mobileMenuToggle?.setAttribute('aria-expanded', String(isOpen));
+    
+    if (isOpen) {
+      body.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = '';
+    }
+  }
+  
+  mobileMenuToggle?.addEventListener('click', toggleMobileMenu);
+  mobileMenuOverlay?.addEventListener('click', toggleMobileMenu);
+  
+  // Mobile Accordion Toggle
+  document.querySelectorAll('.mobile-accordion-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const accordion = trigger.closest('.mobile-accordion');
+      accordion?.classList.toggle('active');
+    });
+  });
+  
+  // Close mobile menu on link click
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (body.classList.contains('mobile-menu-open')) {
+        toggleMobileMenu();
+      }
+    });
+  });
+  
+  // Close mobile menu on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && body.classList.contains('mobile-menu-open')) {
+      toggleMobileMenu();
+    }
+  });
+  
+  // Close mobile menu on resize to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1024 && body.classList.contains('mobile-menu-open')) {
+      toggleMobileMenu();
+    }
+  });
+</script>

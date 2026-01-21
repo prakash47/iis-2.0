@@ -1,0 +1,214 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'About Us';
+const description = 'Learn about Intention InfoService and our mission to transform businesses with technology';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Intention InfoService"
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-gradient-bg"></div>
+    <div class="container relative z-10">
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">About Intention InfoService</h1>
+        <p class="text-xl text-[var(--text-secondary)]">
+          We're a team of passionate technologists, designers, and strategists dedicated to transforming businesses through innovative digital solutions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="section">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">Our Story</h2>
+          <p class="text-lg text-[var(--text-secondary)] mb-4">
+            Intention InfoService was founded with a simple mission: to help businesses harness the power of technology to achieve their goals. We started as a small team of passionate developers and designers, and today we have grown into a full-service digital agency.
+          </p>
+          <p class="text-lg text-[var(--text-secondary)] mb-4">
+            Over the years, we have worked with startups, SMBs, and enterprises across various industries. Each project has taught us something new, and we have continuously evolved our approach to stay at the forefront of technology.
+          </p>
+          <p class="text-lg text-[var(--text-secondary)]">
+            Today, we're excited about the possibilities that AI and automation bring. We're committed to helping our clients leverage these technologies to transform their businesses and create meaningful impact.
+          </p>
+        </div>
+        <div class="bg-[var(--bg-secondary)] rounded-2xl h-96 flex items-center justify-center border border-[var(--border-color)]">
+          <div class="text-center">
+            <div class="text-6xl mb-4">📖</div>
+            <p class="text-[var(--text-secondary)]">Our Journey</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Values Section -->
+  <section class="section bg-[var(--bg-secondary)]">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Our Core Values</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="card">
+          <div class="text-4xl mb-4">💡</div>
+          <h3 class="text-2xl font-bold mb-2">Innovation</h3>
+          <p class="text-[var(--text-secondary)]">We constantly push boundaries and explore new technologies to deliver cutting-edge solutions</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">🤝</div>
+          <h3 class="text-2xl font-bold mb-2">Collaboration</h3>
+          <p class="text-[var(--text-secondary)]">We work closely with our clients, treating them as partners in the journey to success</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">✨</div>
+          <h3 class="text-2xl font-bold mb-2">Excellence</h3>
+          <p class="text-[var(--text-secondary)]">We're committed to delivering the highest quality work in everything we do</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">🎯</div>
+          <h3 class="text-2xl font-bold mb-2">Results-Driven</h3>
+          <p class="text-[var(--text-secondary)]">We focus on delivering measurable results that impact your bottom line</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Our Team</h2>
+      
+      <p class="text-center text-lg text-[var(--text-secondary)] max-w-3xl mx-auto mb-12">
+        Our team consists of experienced professionals with diverse backgrounds in software development, design, marketing, and business strategy. We're united by a passion for technology and a commitment to client success.
+      </p>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="card text-center">
+          <div class="w-24 h-24 bg-gradient-to-br from-[var(--color-cyan-light)] to-[var(--color-cyan)] rounded-full mx-auto mb-4"></div>
+          <h3 class="text-xl font-bold mb-2">John Smith</h3>
+          <p class="text-[var(--text-secondary)] text-sm mb-2">CEO & Founder</p>
+          <p class="text-[var(--text-secondary)] text-xs">15+ years in digital innovation</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="w-24 h-24 bg-gradient-to-br from-[var(--color-cyan-light)] to-[var(--color-cyan)] rounded-full mx-auto mb-4"></div>
+          <h3 class="text-xl font-bold mb-2">Sarah Johnson</h3>
+          <p class="text-[var(--text-secondary)] text-sm mb-2">CTO & Lead Developer</p>
+          <p class="text-[var(--text-secondary)] text-xs">12+ years in full-stack development</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="w-24 h-24 bg-gradient-to-br from-[var(--color-cyan-light)] to-[var(--color-cyan)] rounded-full mx-auto mb-4"></div>
+          <h3 class="text-xl font-bold mb-2">Michael Chen</h3>
+          <p class="text-[var(--text-secondary)] text-sm mb-2">Design Director</p>
+          <p class="text-[var(--text-secondary)] text-xs">10+ years in UX/UI design</p>
+        </div>
+        
+        <div class="card text-center">
+          <div class="w-24 h-24 bg-gradient-to-br from-[var(--color-cyan-light)] to-[var(--color-cyan)] rounded-full mx-auto mb-4"></div>
+          <h3 class="text-xl font-bold mb-2">Emily Rodriguez</h3>
+          <p class="text-[var(--text-secondary)] text-sm mb-2">Marketing Manager</p>
+          <p class="text-[var(--text-secondary)] text-xs">8+ years in digital marketing</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="section bg-[var(--bg-secondary)]">
+    <div class="container">
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-5xl font-bold text-[var(--color-cyan)] mb-2">150+</div>
+          <p class="text-[var(--text-secondary)]">Projects Completed</p>
+        </div>
+        
+        <div>
+          <div class="text-5xl font-bold text-[var(--color-cyan)] mb-2">50+</div>
+          <p class="text-[var(--text-secondary)]">Happy Clients</p>
+        </div>
+        
+        <div>
+          <div class="text-5xl font-bold text-[var(--color-cyan)] mb-2">25+</div>
+          <p class="text-[var(--text-secondary)]">Team Members</p>
+        </div>
+        
+        <div>
+          <div class="text-5xl font-bold text-[var(--color-cyan)] mb-2">10+</div>
+          <p class="text-[var(--text-secondary)]">Years Experience</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Work With Us -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Why Work With Us?</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card">
+          <div class="text-4xl mb-4">🚀</div>
+          <h3 class="text-2xl font-bold mb-2">Fast Execution</h3>
+          <p class="text-[var(--text-secondary)]">We deliver projects on time without compromising on quality. Our agile processes ensure rapid iteration and continuous improvement.</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">🎯</div>
+          <h3 class="text-2xl font-bold mb-2">Strategic Thinking</h3>
+          <p class="text-[var(--text-secondary)]">We don't just build; we think strategically about your business goals and how technology can help you achieve them.</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">💪</div>
+          <h3 class="text-2xl font-bold mb-2">Full-Stack Expertise</h3>
+          <p class="text-[var(--text-secondary)]">From design to deployment, we handle every aspect of your project with expertise and attention to detail.</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">📈</div>
+          <h3 class="text-2xl font-bold mb-2">Proven Results</h3>
+          <p class="text-[var(--text-secondary)]">Our track record speaks for itself. We've helped clients increase revenue, reduce costs, and improve efficiency.</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">🤝</div>
+          <h3 class="text-2xl font-bold mb-2">Partnership Approach</h3>
+          <p class="text-[var(--text-secondary)]">We treat every client as a partner. Your success is our success, and we're committed to your long-term growth.</p>
+        </div>
+        
+        <div class="card">
+          <div class="text-4xl mb-4">🔄</div>
+          <h3 class="text-2xl font-bold mb-2">Continuous Support</h3>
+          <p class="text-[var(--text-secondary)]">Our relationship doesn't end at launch. We provide ongoing support and optimization to ensure your solutions continue to deliver value.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-section text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Let's Work Together</h2>
+        <p class="text-xl mb-8 opacity-90">Ready to transform your business? Let's discuss your vision and how we can help</p>
+        <a href="/contact/" class="inline-block px-8 py-4 bg-white text-[var(--color-navy)] font-bold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

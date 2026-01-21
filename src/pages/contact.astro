@@ -1,0 +1,241 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Contact Us';
+const description = 'Get in touch with our team to discuss your project and how we can help';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Intention InfoService",
+  "description": "Get in touch with our team"
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-gradient-bg"></div>
+    <div class="container relative z-10">
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">Get in Touch</h1>
+        <p class="text-xl text-[var(--text-secondary)]">
+          Have a project in mind? Let's discuss how we can help you achieve your goals
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <!-- Contact Info -->
+        <div class="space-y-8">
+          <div class="card">
+            <div class="text-4xl mb-4">📧</div>
+            <h3 class="text-2xl font-bold mb-2">Email</h3>
+            <a href="mailto:hello@intention-infoservice.com" class="text-[var(--color-cyan)] hover:underline">
+              hello@intention-infoservice.com
+            </a>
+          </div>
+          
+          <div class="card">
+            <div class="text-4xl mb-4">📱</div>
+            <h3 class="text-2xl font-bold mb-2">Phone</h3>
+            <a href="tel:+1234567890" class="text-[var(--color-cyan)] hover:underline">
+              +1 (234) 567-890
+            </a>
+          </div>
+          
+          <div class="card">
+            <div class="text-4xl mb-4">📍</div>
+            <h3 class="text-2xl font-bold mb-2">Address</h3>
+            <p class="text-[var(--text-secondary)]">
+              123 Tech Street<br />
+              San Francisco, CA 94105<br />
+              United States
+            </p>
+          </div>
+          
+          <div class="card">
+            <div class="text-4xl mb-4">🕐</div>
+            <h3 class="text-2xl font-bold mb-2">Business Hours</h3>
+            <p class="text-[var(--text-secondary)]">
+              Monday - Friday: 9:00 AM - 6:00 PM<br />
+              Saturday: 10:00 AM - 4:00 PM<br />
+              Sunday: Closed
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="md:col-span-2">
+          <div class="card">
+            <h2 class="text-3xl font-bold mb-8">Send us a Message</h2>
+            
+            <form class="space-y-6" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label for="name" class="block text-sm font-medium mb-2">Full Name</label>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    required 
+                    class="w-full px-4 py-3 rounded-lg border border-[var(--border-color)] bg-[var(--bg-primary)] text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-cyan)]"
+                    placeholder="John Doe"
+                  />
+                </div>
+                
+                <div>
+                  <label for="email" class="block text-sm font-medium mb-2">Email Address</label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required 
+                    class="w-full px-4 py-3 rounded-lg border border-[var(--border-color)] bg-[var(--bg-primary)] text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-cyan)]"
+                    placeholder="john@example.com"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <label for="company" class="block text-sm font-medium mb-2">Company Name</label>
+                <input 
+                  type="text" 
+                  id="company" 
+                  name="company" 
+                  class="w-full px-4 py-3 rounded-lg border border-[var(--border-color)] bg-[var(--bg-primary)] text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-cyan)]"
+                  placeholder="Your Company"
+                />
+              </div>
+              
+              <div>
+                <label for="service" class="block text-sm font-medium mb-2">Service of Interest</label>
+                <select 
+                  id="service" 
+                  name="service" 
+                  class="w-full px-4 py-3 rounded-lg border border-[var(--border-color)] bg-[var(--bg-primary)] text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-cyan)]"
+                >
+                  <option value="">Select a service</option>
+                  <option value="web-development">Web Development</option>
+                  <option value="mobile-apps">Mobile Apps</option>
+                  <option value="ai-workflows">AI Workflows</option>
+                  <option value="ui-ux-branding">UI/UX Branding</option>
+                  <option value="digital-marketing">Digital Marketing</option>
+                  <option value="maintenance">Maintenance & Support</option>
+                  <option value="custom-solutions">Custom Solutions</option>
+                </select>
+              </div>
+              
+              <div>
+                <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows="6" 
+                  required 
+                  class="w-full px-4 py-3 rounded-lg border border-[var(--border-color)] bg-[var(--bg-primary)] text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-cyan)]"
+                  placeholder="Tell us about your project..."
+                ></textarea>
+              </div>
+              
+              <div class="flex items-center gap-2">
+                <input 
+                  type="checkbox" 
+                  id="privacy" 
+                  name="privacy" 
+                  required 
+                  class="w-4 h-4"
+                />
+                <label for="privacy" class="text-sm text-[var(--text-secondary)]">
+                  I agree to the privacy policy and terms of service
+                </label>
+              </div>
+              
+              <button 
+                type="submit" 
+                class="btn btn-primary w-full"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section bg-[var(--bg-secondary)]">
+    <div class="container">
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">Frequently Asked Questions</h2>
+      
+      <div class="max-w-3xl mx-auto space-y-6">
+        <details class="card cursor-pointer group">
+          <summary class="font-bold text-lg flex justify-between items-center">
+            What is your typical project timeline?
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-[var(--text-secondary)] mt-4">
+            Project timelines vary based on scope and complexity. Most projects range from 4-16 weeks. We'll provide a detailed timeline during the discovery phase.
+          </p>
+        </details>
+        
+        <details class="card cursor-pointer group">
+          <summary class="font-bold text-lg flex justify-between items-center">
+            Do you offer ongoing support?
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-[var(--text-secondary)] mt-4">
+            Yes! We offer comprehensive maintenance and support packages to keep your systems running smoothly. Check out our Maintenance & Support service for more details.
+          </p>
+        </details>
+        
+        <details class="card cursor-pointer group">
+          <summary class="font-bold text-lg flex justify-between items-center">
+            What technologies do you work with?
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-[var(--text-secondary)] mt-4">
+            We work with modern technologies including React, Next.js, Astro, Node.js, Python, TypeScript, and more. We choose the best tools for your specific needs.
+          </p>
+        </details>
+        
+        <details class="card cursor-pointer group">
+          <summary class="font-bold text-lg flex justify-between items-center">
+            How do you handle project communication?
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-[var(--text-secondary)] mt-4">
+            We maintain regular communication through weekly updates, sprint reviews, and dedicated Slack channels. You'll always know the status of your project.
+          </p>
+        </details>
+        
+        <details class="card cursor-pointer group">
+          <summary class="font-bold text-lg flex justify-between items-center">
+            Can you work with existing systems?
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-[var(--text-secondary)] mt-4">
+            Absolutely! We specialize in integrating with existing systems and can build custom solutions that work seamlessly with your current tech stack.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-section text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Ready to Start Your Project?</h2>
+        <p class="text-xl mb-8 opacity-90">Fill out the form above or reach out directly to discuss your needs</p>
+      </div>
+    </div>
+  </section>
+</Layout>
